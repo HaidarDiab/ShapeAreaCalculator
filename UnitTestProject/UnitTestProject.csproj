@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5F664A71-25E8-4FCB-BC2C-3D19D7DAB676}</ProjectGuid>
+    <ProjectGuid>{8F71D7B1-5A29-40A9-8D33-9C25D3EAE995}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UnitTestProject</RootNamespace>
@@ -49,11 +49,19 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="CircleTests.cs" />
+    <Compile Include="ShapeFactoryTests.cs" />
+    <Compile Include="TriangleTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShapeAreaCalculator\ShapeAreaCalculator.csproj">
+      <Project>{db14db31-2d90-4954-a665-9134358efa31}</Project>
+      <Name>ShapeAreaCalculator</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
